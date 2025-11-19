@@ -75,6 +75,10 @@ float readTemperature(uint8_t *rom) {
   }
   
   int16_t raw = (data[1] << 8) | data[0];
+  if (raw == 0) {
+    DEBUG_PRINTLN("RAW scratchpad = 0, rejected")
+    return -127.0;
+  }
   float temp = (float)raw / 16.0;
   
   if (temp < -30.0 || temp > 110.0) {
