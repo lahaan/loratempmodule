@@ -8,7 +8,7 @@ RAK module that supports RUI3, is based on an STM32 MCU and supports the followi
 On nRF-series of MCUs, the use of DS18B20 or other Onewire sensors should be easier and more widely supported, for example nRF52832 (without LoRa):
   https://github.com/lahaan/nRF52832-DS18B20-temp
 
-DS18B20 wiring: electrically speaking, is dependant on several factors (e.g, wire length, type of module, breadboard*, temperature range etc). Change relative to your own needs, however, in our case, the best solution (as of 11/19/2025) ended up being a 10k pull-up resistor (3V3-DIGITAL), and a 220uF Aluminium Polymber Low-ESR decoupling capacitor (3V3-GND). Generally, though, you do not need a capacitor, and should be fine with a 4.7k PUR. 
+DS18B20 wiring: electrically speaking, is dependant on several factors (e.g, wire length, type of module, breadboard*, temperature range etc). Change relative to your own needs, however, in our case, the best solution (as of 19/11/2025) ended up being a 10k pull-up resistor (3V3-DIGITAL), and a 220uF Aluminium Polymber Low-ESR decoupling capacitor (3V3-GND). Generally, though, you do not need a capacitor, and should be fine with a 4.7k PUR. 
 
 Before customizing the firmware or flashing it onto the module, one needs to install necessary software/API and an IDE for it. In our case, we followed official documentation / recommendations for simplicity sake (via RAKWireless themselves), and ended up using Arduino IDE with RUI3 on top. It is also possible to use Visual Studio Code with something like PlatformIO for more flexibility. 
   https://docs.rakwireless.com/product-categories/wisduo/rak3272s-breakout-board/quickstart/
